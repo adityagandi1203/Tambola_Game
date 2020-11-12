@@ -1,0 +1,84 @@
+<mvc:View controllerName="com.tambola.Tambola.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:m="sap.m"
+	xmlns="sap.ui.table" xmlns:core="sap.ui.core">
+	<m:Shell id="shell">
+		<m:App id="app">
+			<m:pages>
+				<m:Page id="page" title="{i18n>title}" titleAlignment="Center">
+					<m:content>
+						<m:FlexBox
+					
+					alignItems="Center"
+					justifyContent="Center"
+					>
+					<m:items>
+							
+							<!--<m:Label text="Number: "></m:Label>-->
+							<m:Input id="number" fieldWidth="20%" editable="flase" placeholder="Number"></m:Input>
+							<m:Button id="generateButton" text="Generate" press="onGenerate"></m:Button>
+					</m:items>
+				</m:FlexBox>
+						<Table id="myTable"  rows="{myNum>/}" selectionMode="None">
+							<columns>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text  id="idOne" text="{myNum>ones}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idTwo" text="{myNum>twos}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text  id="idThree" text="{myNum>threes}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idFour" text="{myNum>fours}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idFive" text="{myNum>fives}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idSix"  text="{myNum>sixs}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idSeven" text="{myNum>sevens}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idEight"  text="{myNum>eights}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idNine" text="{myNum>nines}" wrapping="false"/>
+									</template>
+								</Column>
+								<Column autoResizable="true" hAlign="Center">
+									<template>
+										<m:Text id="idTen" text="{myNum>tens}" wrapping="false"/>
+									</template>
+								</Column>
+							
+								
+							</columns>
+							<footer>
+								<m:TextArea  editable="false" id="textarea"></m:TextArea>
+							</footer>
+						</Table>
+					</m:content>
+				</m:Page>
+			</m:pages>
+		</m:App>
+	</m:Shell>
+</mvc:View>
